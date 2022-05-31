@@ -38,15 +38,14 @@ packer.init {
   },
 }
 
--- Install your plugins here
 return packer.startup(function(use)
-  -- My plugins here
-  use "wbthomason/packer.nvim" -- Have packer manage itself
-  use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
-  use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
+  use "wbthomason/packer.nvim"      -- Have packer manage itself
+  use "nvim-lua/popup.nvim"         -- An implementation of the Popup API from vim in Neovim
+  use "nvim-lua/plenary.nvim"       -- Useful lua functions used ny lots of plugins
+  use "projekt0n/github-nvim-theme"  -- Github colorschemes
+  use "github/copilot.vim"          -- A vim plugin for copilot
 
-  -- Automatically set up your configuration after cloning packer.nvim
-  -- Put this at the end after all plugins
+  -- Automatically set up configuration after cloning packer.nvim
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
