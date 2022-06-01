@@ -66,6 +66,14 @@ return packer.startup(function(use)
   use "nvim-telescope/telescope.nvim"
   use 'nvim-telescope/telescope-media-files.nvim'
 
+   -- Treesitter
+   use {
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate",
+  }
+  use "p00f/nvim-ts-rainbow"
+  use "nvim-treesitter/playground"
+
   -- Automatically set up configuration after cloning packer.nvim
   if PACKER_BOOTSTRAP then
     require("packer").sync()
