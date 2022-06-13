@@ -1,2 +1,2 @@
-vim.opt.listchars = { lead = "·", multispace = "·" }
+vim.opt.listchars = { multispace = "·", tab = "→ " }
 vim.opt.list = true

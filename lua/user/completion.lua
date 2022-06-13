@@ -47,9 +47,6 @@ local kind_icons = {
 -- Copilot setup
 -- require("copilot")
 vim.g.copilot_node_command = "~/.nvm/versions/node/v12.20.1/bin/node"
-vim.g.copilot_no_tab_map = true
-vim.g.copilot_assume_mapped = true
-vim.g.copilot_tab_fallback = ""
 
 -- cmp setup
 cmp.setup({
@@ -76,39 +73,6 @@ cmp.setup({
 		-- Accept currently selected item. If none selected, `select` first item.
 		-- Set `select` to `false` to only confirm explicitly selected items.
 		["<CR>"] = cmp.mapping.confirm({ select = true }),
-		["<Tab>"] = cmp.mapping(function(fallback)
-			if cmp.visible() then
-				cmp.select_next_item()
-			elseif luasnip.expandable() then
-				luasnip.expand()
-			elseif luasnip.expand_or_jumpable() then
-				luasnip.expand_or_jump()
-			elseif check_backspace() then
-				fallback()
-			else
-				local copilot_keys = vim.fn["copilot#Accept"]()
-				if copilot_keys ~= "" then
-					vim.api.nvim_feedkeys(copilot_keys, "i", true)
-				else
-					fallback()
-				end
-			end
-		end, {
-			"i",
-			"s",
-		}),
-		["<C-Tab>"] = cmp.mapping(function(fallback)
-			if cmp.visible() then
-				cmp.select_prev_item()
-			elseif luasnip.jumpable(-1) then
-				luasnip.jump(-1)
-			else
-				fallback()
-			end
-		end, {
-			"i",
-			"s",
-		}),
 	},
 	formatting = {
 		fields = { "kind", "abbr", "menu" },
