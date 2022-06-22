@@ -48,7 +48,7 @@ return packer.startup(function(use)
 		requires = { "kyazdani42/nvim-web-devicons", opt = true },
 	})
 	use("b0o/incline.nvim")
-	use("github/copilot.vim") -- A vim plugin for copilot
+	-- use("github/copilot.vim") -- A vim plugin for copilot
 	use("windwp/nvim-autopairs") -- Autopairs, integrates with both cmp and treesitter
 	use("numToStr/Comment.nvim") -- Easily comment stuff
 
