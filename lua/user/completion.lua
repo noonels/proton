@@ -46,7 +46,7 @@ local kind_icons = {
 
 -- Copilot setup
 -- require("copilot")
--- vim.g.copilot_node_command = "~/.nvm/versions/node/v12.20.1/bin/node"
+vim.g.copilot_node_command = "~/.nvm/versions/node/v12.20.1/bin/node"
 
 -- cmp setup
 cmp.setup({
