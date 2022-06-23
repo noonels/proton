@@ -27,13 +27,6 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
--- Terminal --
--- Better terminal navigation
-keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
-keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
-keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
-keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
-
 keymap(
 	"n",
 	"<leader>p",
@@ -50,3 +43,8 @@ keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts)
 
 -- Nvimtree
 keymap("n", "<leader>f", ":NvimTreeToggle<cr>", opts)
+
+-- Jester
+keymap("n", "<leader>rt", "<cmd>lua require'jester'.run()<cr>", opts)
+keymap("n", "<leader>rf", "<cmd>lua require'jester'.run_file()<cr>", opts)
+keymap("n", "<leader>dt", "<cmd>lua require'jester'.debug()<cr>", opts)

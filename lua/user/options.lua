@@ -41,3 +41,5 @@ end
 
 vim.cmd("set whichwrap+=<,>,[,],h,l")
 vim.cmd([[set iskeyword+=-]])
+
+vim.g.neovide_cursor_vfx_mode = "railgun"

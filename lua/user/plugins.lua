@@ -102,6 +102,8 @@ return packer.startup(function(use)
 
 	use("xiyaowong/virtcolumn.nvim")
 
+	use("David-Kunz/jester")
+
 	-- Automatically set up configuration after cloning packer.nvim
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
