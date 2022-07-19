@@ -20,11 +20,10 @@ nvim_tree.setup({
 				symlink = "",
 				git = {
 					unstaged = "",
-					staged = "S",
 					unmerged = "",
 					renamed = "➜",
 					deleted = "",
-					untracked = "U",
+					untracked = "+",
 					ignored = "◌",
 				},
 				folder = {
@@ -79,7 +78,6 @@ nvim_tree.setup({
 		height = 30,
 		hide_root_folder = false,
 		side = "left",
-		auto_resize = true,
 		mappings = {
 			custom_only = false,
 			list = {
