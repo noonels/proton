@@ -3,6 +3,8 @@ if not status_ok then
 	return
 end
 
-require("user.lsp.lsp-installer")
-require "user.lsp.null-ls"
-require("user.lsp.handlers").setup()
+require("nvim-lsp-installer").setup({
+	automatic_installation = true,
+})
+require("user.lsp.null-ls")
+require("user.lsp.handlers")
